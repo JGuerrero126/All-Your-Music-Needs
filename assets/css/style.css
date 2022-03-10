@@ -1,5 +1,26 @@
-body {
+#indexBackground {
   height: 100%;
   background-image: url("../images/concert.jpeg");
   background-size: cover;
+}
+
+#resultsBackground {
+  height: 100%;
+  background-image: url("../images/rager.jpeg");
+  background-size: cover;
+}
+
+#box-style {
+  background-image: linear-gradient(blue, white);
+  margin-top: 50px;
+}
+
+#card-style {
+  font-size: 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#text-style {
+  font-size: 20px;
+  margin: 20px;
 }
