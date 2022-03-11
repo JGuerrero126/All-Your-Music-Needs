@@ -10,6 +10,18 @@
   background-size: cover;
 }
 
+#upcomingConcertsBackground {
+  height: 100%;
+  background-image: url("../images/symphony.jpeg");
+  background-size: cover;
+}
+
+#favArtistsBackground {
+  height: 100%;
+  background-image: url("../images/club.jpeg");
+  background-size: cover;
+}
+
 #box-style {
   background-image: linear-gradient(blue, white);
   margin-top: 50px;
@@ -34,6 +46,18 @@
 
 #boxTwo-style {
   background-image: linear-gradient(red, white);
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+#boxThree-style {
+  background-image: linear-gradient(green, white);
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+#boxFour-style {
+  background-image: linear-gradient(gold, white);
   margin-top: 50px;
   border-radius: 5px;
 }
