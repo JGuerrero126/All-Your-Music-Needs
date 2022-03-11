@@ -11,7 +11,7 @@ var resultsPage = ("./results.html")
 
 function artistInfo() {
     var fmUrl = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + $(userInput).val() + "&api_key=69620325977759b14543d8cfc6fa68a0&format=json"
-    var ticketURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + $(userInput).val() + "&size=5&apikey=USzTc6qr6ETGb2XjLqkmH72GVPTvjCPI"
+    var bandsURL = "https://rest.bandsintown.com/artists/" + $(userInput).val() + "/?app_id=codingbootcamp"
 
     fetch(fmUrl)
     .then(function (response) {
@@ -24,7 +24,7 @@ function artistInfo() {
       .then(function (data) {
         console.log(data);
       });
-    fetch(ticketURL)
+    fetch(bandsURL)
     .then(function (response) {
       if (response.status === 404) {
         console.log(response)
