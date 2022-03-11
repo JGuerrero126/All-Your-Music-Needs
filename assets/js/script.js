@@ -5,10 +5,10 @@ var userInput = $("#userInput");
 var searchBtn = $("#searchBtn");
 var saveFavBtn = $("");
 var saveConBtn = $("");
-var artistName = $("");
-var artistBio = $("");
-var concertList = $("");
-var artistImg = $("");
+var artistName = $(".artistsName");
+var artistBio = $(".artistsBio");
+var concertList = $(".upcomingTourDates");
+var artistImg = $(".artistImage");
 var resultsPage = ("./results.html");
 
 function artistInfo() {
@@ -57,6 +57,13 @@ function artistInfo() {
     })
     .then(function (data) {
       console.log(data);
+
+      for (i = 0; i < 5; i++) {
+        var date = moment(data[i].datetime).format("MMM Do, YYYY")
+        console.log(moment(date).format("MMM Do, YYYY"))
+
+        $("<li>", { text: data[i].venue.name + " " + data[i].venue.location + " " + date}).appendTo(concertList);
+      }
     });
 }
 
