@@ -31,7 +31,7 @@ function artistInfo() {
       .then(function (data) {
         console.log(data);
         artistName.text(data.artist.name)
-        artistBio.text(data.artist.bio.summary)
+        artistBio.html(data.artist.bio.summary)
 
 
       });
