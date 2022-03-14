@@ -79,8 +79,12 @@
   margin-left: -5px;
 }
 
+#searchBtn {
+  margin-top: 15px;
+}
+
 #svfvBtn {
   border: 2px solid red;
-  background-color: rgb(187, 159, 3);
+  background-color: rgb(243, 215, 54);
   margin-top: 15px;
 }
