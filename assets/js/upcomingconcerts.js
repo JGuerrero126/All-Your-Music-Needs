@@ -15,11 +15,13 @@ function concertInfo() {
     .then(function (data) {
       console.log(data);
 
-      for (i = 0; i < 30; i++) {
-        var date = moment(data[i].datetime).format("MMM Do, YYYY")
-        console.log(moment(date).format("MMM Do, YYYY"))
+      for (i = 0; i < data.length && i < 20; i++) {
+          console.log(i)
+          console.log(data[i].datetime)
+        var date = moment(data[i].datetime, "YYYY MM DD").format("MMM Do, YYYY")
+        console.log(moment(date))
 
-        $("<li>", { text: data[i].venue.name + " " + data[i].venue.location + " " + date}).appendTo(concertList);
+        $("<li>", { text: data[0].artist.name + " Performing At " + data[i].venue.name + " " + data[i].venue.location + " " + date}).appendTo(concertList);
       }
     });
 }
