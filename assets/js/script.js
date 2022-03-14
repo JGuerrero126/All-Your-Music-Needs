@@ -82,6 +82,8 @@ function gotoResults() {
     window.location.href = resultsPage
 }
 
+console.log(window.location.pathname)
+
 if (window.location.pathname == "results.html") {
   artistInfo();
 } else if (window.location.pathname == "/C:/Users/jerry/Codingspace/All-Your-Music-Needs/results.html") {
