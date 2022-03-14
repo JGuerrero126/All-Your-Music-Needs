@@ -83,6 +83,9 @@ function gotoResults() {
 
 function saveToFav() {
   favArtists = JSON.parse(localStorage.getItem("FavArtist"))
+  if (favArtists == null){
+    favArtists =[]
+  }
   var userRequest = localStorage.getItem("userInput")
   favArtists.push(userRequest)
   localStorage.setItem("FavArtist", JSON.stringify(favArtists))
