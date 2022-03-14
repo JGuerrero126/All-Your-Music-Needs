@@ -84,7 +84,7 @@ function gotoResults() {
 
 console.log(window.location.pathname)
 
-if (window.location.pathname == "results.html") {
+if (window.location.pathname == "/All-Your-Music-Needs/results.html") {
   artistInfo();
 } else if (window.location.pathname == "/C:/Users/jerry/Codingspace/All-Your-Music-Needs/results.html") {
   artistInfo();
