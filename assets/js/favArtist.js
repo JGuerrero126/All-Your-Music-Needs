@@ -1,6 +1,6 @@
 function favArtistinfo() {
-   var favArtist = JSON.parse(localStorage.getItem("FavArtist"))
-   localStorage.setItem("FavArtist", JSON.stringify(favArtist));
+  var favArtist = JSON.parse(localStorage.getItem("FavArtist"));
+  localStorage.setItem("FavArtist", JSON.stringify(favArtist));
   for (i = 0; i < favArtist.length; i++) {
     var fmUrl =
       "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" +
@@ -25,7 +25,8 @@ function favArtistinfo() {
           .attr("style", "width: 18rem");
         var cardBody = $("<div>").attr("class", "card-body");
         var cardTitle = $("<h5>")
-          .attr("class", "card-title text-warning")
+          .attr("class", "card-title text-dark")
+          .attr("id", "boxFour-text")
           .text(data.artist.name);
         var cardText = $("<p>")
           .attr("class", "card-text text-black-50")
@@ -38,5 +39,3 @@ function favArtistinfo() {
   }
 }
 favArtistinfo();
-
-
